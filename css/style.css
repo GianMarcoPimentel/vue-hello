@@ -1,1 +1,12 @@
-.message{text-align: center;}
+body{text-align: center;}
+h1:hover{
+    color: red;
+}
+img{
+    transform: scale(1);
+    margin-top: 100px;
+}
+img:hover{
+    transform: scale(1.2);
+    
+}
