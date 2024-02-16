@@ -16,9 +16,20 @@
         </h1>
 
         <div>
-            <label for="">Inserisci tu la frase che vuoi che venga letta </label>
-            <input type="text" v-model="message"> <!-- con v-modle, quello che scrivo nell'imnput sarà visibile al posto di quello che c'è scritto nel nome -->
+            <label for="text">Inserisci tu la frase che vuoi che venga letta </label>
+            <input id="text" type="text" v-model="message"> <!-- con v-modle, quello che scrivo nell'imnput sarà visibile al posto di quello che c'è scritto nel nome -->
             
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+            <label for="image">Inserisci tu l'url dell' immagine che vuoi visualizzare </label>
+            <input id="image" type="text" v-model ="image">
+            <p>Per esempio : https://media.istockphoto.com/id/517188688/it/foto/paesaggio-di-montagna.jpg?s=612x612&w=0&k=20&c=3-yra8c7GyAenb5DTfF1x5XKFqGB1Gp6vXAtTf5fDNM=</p>
+        </div>
+        <div>
+            <img :src="image" alt="">
         </div>
 
     </div>
@@ -29,7 +40,8 @@
         createApp({
             data(){
                 return{
-                   message : "Hello User! Weelcome in Boolean"
+                   message : "Hello User! Weelcome in Boolean",
+                   image : "url immagine"
                 }
             }
         }).mount("#app");
