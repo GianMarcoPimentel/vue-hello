@@ -11,6 +11,15 @@
     
     <div id="app">
        
+        <h1 :class="message">
+            {{message}}
+        </h1>
+
+        <div>
+            <label for="">Inserisci tu la frase che vuoi che venga letta </label>
+            <input type="text" v-model="message"> <!-- con v-modle, quello che scrivo nell'imnput sarà visibile al posto di quello che c'è scritto nel nome -->
+            
+        </div>
 
     </div>
   
@@ -20,7 +29,7 @@
         createApp({
             data(){
                 return{
-                   
+                   message : "Hello User! Weelcome in Boolean"
                 }
             }
         }).mount("#app");
